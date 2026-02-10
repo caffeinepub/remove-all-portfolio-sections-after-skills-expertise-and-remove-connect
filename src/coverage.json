@@ -1,0 +1,84 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-10T02:20:48.510Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 5,
+    "implemented": 5,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Update the main page layout to stop the portfolio content at the “Skills” section by removing all sections rendered after Skills (e.g., the Gallery and Contact sections) so that the page ends after Skills.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Update site navigation to match the new section list by removing navigation links to sections that no longer exist (e.g., Gallery and Contact) and ensuring remaining links still smooth-scroll correctly.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/portfolio/SiteHeader.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/portfolio/SiteHeader.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Update the hero CTA buttons so they do not scroll to removed sections; replace or remove CTAs that target `#gallery` and `#contact` so all hero CTAs navigate to existing sections only.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/portfolio/sections/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/portfolio/sections/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Remove the “Connect” part from the footer and ensure the footer layout remains visually balanced after the removal (including removing any related social icon links shown under the Connect heading).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/portfolio/SiteFooter.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/portfolio/SiteFooter.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Update footer “Quick Links” so it does not include links to removed sections (e.g., Gallery and Contact).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/portfolio/SiteFooter.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/portfolio/SiteFooter.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/App.tsx",
+    "frontend/src/components/portfolio/SiteFooter.tsx",
+    "frontend/src/components/portfolio/SiteHeader.tsx",
+    "frontend/src/components/portfolio/sections/HeroSection.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

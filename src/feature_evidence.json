@@ -1,0 +1,95 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-main-page-layout-to-stop-the-portfolio-content-at-the-skills-section-by-removing-all-sections-rendered-after-skills-e-g-the-gallery-and-contact-sections-so-that-the-page-ends-after-skills",
+      "featureTitle": "Update the main page layout to stop the portfolio content at the “Skills” section by removing all sections rendered after Skills (e.g., the Gallery and Contact sections) so that the page ends after Skills.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-site-navigation-to-match-the-new-section-list-by-removing-navigation-links-to-sections-that-no-longer-exist-e-g-gallery-and-contact-and-ensuring-remaining-links-still-smooth-scroll-correctly",
+      "featureTitle": "Update site navigation to match the new section list by removing navigation links to sections that no longer exist (e.g., Gallery and Contact) and ensuring remaining links still smooth-scroll correctly.",
+      "files": [
+        "frontend/src/components/portfolio/SiteHeader.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-hero-cta-buttons-so-they-do-not-scroll-to-removed-sections-replace-or-remove-ctas-that-target-gallery-and-contact-so-all-hero-ctas-navigate-to-existing-sections-only",
+      "featureTitle": "Update the hero CTA buttons so they do not scroll to removed sections; replace or remove CTAs that target `#gallery` and `#contact` so all hero CTAs navigate to existing sections only.",
+      "files": [
+        "frontend/src/components/portfolio/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-connect-part-from-the-footer-and-ensure-the-footer-layout-remains-visually-balanced-after-the-removal-including-removing-any-related-social-icon-links-shown-under-the-connect-heading",
+      "featureTitle": "Remove the “Connect” part from the footer and ensure the footer layout remains visually balanced after the removal (including removing any related social icon links shown under the Connect heading).",
+      "files": [
+        "frontend/src/components/portfolio/SiteFooter.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-footer-quick-links-so-it-does-not-include-links-to-removed-sections-e-g-gallery-and-contact",
+      "featureTitle": "Update footer “Quick Links” so it does not include links to removed sections (e.g., Gallery and Contact).",
+      "files": [
+        "frontend/src/components/portfolio/SiteFooter.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

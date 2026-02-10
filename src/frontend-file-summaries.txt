@@ -1,0 +1,20 @@
+{
+  "frontend/src/App.tsx": "Main application component that composes portfolio sections (Hero, About, Services, Experience, Skills) with header and footer in a single-page layout, ending after the Skills section.",
+  "frontend/src/data/portfolio.ts": "Centralized TypeScript data model containing all portfolio content (services, experiences from resume, skills from resume, gallery items, contact info with phone/location) with proper type definitions including optional fields for phone and location.",
+  "frontend/src/components/portfolio/SiteHeader.tsx": "Sticky navigation header with \"Pradip Maity\" branding, smooth scroll anchored links for Home, About, Services, Experience, and Skills sections, and mobile-responsive Sheet menu.",
+  "frontend/src/components/portfolio/SiteFooter.tsx": "Footer component with portfolio description, quick links to all existing sections (Home, About, Services, Experience, Skills), and Caffeine.ai attribution with UTM tracking in a 2-column layout.",
+  "frontend/src/components/portfolio/SectionHeader.tsx": "Reusable section header component with optional eyebrow, title, subtitle, and configurable alignment for consistent typography.",
+  "frontend/src/components/portfolio/sections/HeroSection.tsx": "Hero section with background image, headline featuring \"Pradip Maity\" and role positioning, resume-based summary paragraph, and CTAs that scroll to Skills and Experience sections.",
+  "frontend/src/components/portfolio/sections/AboutSection.tsx": "About section showcasing four key highlights (social media, writing, design, photography/videography) in a grid layout with icons.",
+  "frontend/src/components/portfolio/sections/ServicesSection.tsx": "Services section rendering six service cards from data model with icons and descriptions in a responsive grid.",
+  "frontend/src/components/portfolio/sections/ExperienceSection.tsx": "Experience section displaying five work history cards from resume (Jeena Sikho roles, CGC University, A Digital Blogger, Cricline) with organization names, locations, periods, and bullet highlights in a responsive layout.",
+  "frontend/src/components/portfolio/sections/SkillsSection.tsx": "Skills section organizing resume-based capabilities into four categories (Content & Writing, Social Media, Design & Tools, Photography & Video) with badge-styled skill tags.",
+  "frontend/src/components/portfolio/sections/GallerySection.tsx": "Gallery section container that manages lightbox state and renders the grid and modal components.",
+  "frontend/src/components/portfolio/sections/ContactSection.tsx": "Contact section displaying email, phone number (8591543194), location (Derabassi 140507) as readable text, mailto CTA, resume download button pointing to pradip-maity-resume.pdf, and social media links.",
+  "frontend/src/components/portfolio/GalleryGrid.tsx": "Responsive gallery grid component displaying thumbnails with hover effects and click handlers for lightbox preview.",
+  "frontend/src/components/portfolio/GalleryLightbox.tsx": "Modal lightbox component using Dialog for displaying full-size gallery images with title and caption.",
+  "frontend/src/index.css": "Global styles with warm neutral OKLCH color palette (terracotta/rust primary, amber accent) for both light and dark modes, avoiding blue/purple.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme with Inter font family and maintaining consistent design tokens.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as backend has no methods; all data is client-side.",
+  "frontend/public/assets/pradip-maity-resume.pdf": "Real resume PDF file derived from the uploaded resume image, publicly downloadable from the Contact section."
+}

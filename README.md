@@ -1,2 +1,3 @@
-# remove-all-portfolio-sections-after-skills-expertise-and-remove-connect
-Exported from Caffeine project: Remove all portfolio sections after Skills &amp; Expertise and remove Connect
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

@@ -1,0 +1,82 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Trim portfolio to end after Skills and remove Connect/footer links",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Stop main page content after the Skills section by removing sections rendered after Skills (Gallery and Contact).",
+      "acceptanceCriteria": [
+        "`frontend/src/App.tsx` no longer imports or renders `GallerySection` and `ContactSection` after `SkillsSection`.",
+        "When viewing the app, scrolling past the Skills section does not reveal Gallery or Contact content."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Remove imports and render calls for `GallerySection` and `ContactSection` so the `<main>` content ends after `<SkillsSection />`."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Remove navigation links to deleted sections and keep smooth-scroll working for remaining sections.",
+      "acceptanceCriteria": [
+        "`frontend/src/components/portfolio/SiteHeader.tsx` nav items do not include “Gallery” or “Contact”.",
+        "Clicking remaining header links (Home/About/Services/Experience/Skills) smooth-scrolls to the correct section without errors."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Update `navItems` to remove entries for `#gallery` and `#contact` while keeping existing smooth-scroll behavior for `#hero`, `#about`, `#services`, `#experience`, and `#skills`."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Update hero CTA buttons to only scroll to sections that still exist.",
+      "acceptanceCriteria": [
+        "`frontend/src/components/portfolio/sections/HeroSection.tsx` no longer references `#contact` or `#gallery`.",
+        "All visible hero buttons scroll to existing sections (for example `#skills` and/or `#experience`) and do not produce console errors when clicked."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Replace or remove CTA button actions so no CTA calls `scrollToSection('#contact')` or `scrollToSection('#gallery')`; retarget CTAs to existing section IDs such as `#skills` and/or `#experience`."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Remove the “Connect” footer column (including social icons) and rebalance footer layout.",
+      "acceptanceCriteria": [
+        "`frontend/src/components/portfolio/SiteFooter.tsx` no longer displays the “Connect” heading or its social icon row.",
+        "Footer spacing/grid does not leave an empty third column; the remaining footer sections render cleanly on mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Remove the entire “Connect” block and related icon imports/usages; adjust the footer grid classes/content so the layout is balanced without an empty third column (e.g., shift to a 2-column layout on desktop)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Remove footer Quick Links that point to deleted sections so no footer links target missing section IDs.",
+      "acceptanceCriteria": [
+        "`frontend/src/components/portfolio/SiteFooter.tsx` quick links do not include anchors for `#gallery` or `#contact`.",
+        "No remaining footer links point to non-existent section IDs."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Update the “Quick Links” list to remove links to `#gallery` and `#contact`, and ensure all remaining links point to section IDs that still exist (e.g., `#about`, `#services`, `#experience`, `#skills`, optionally `#hero`)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Portfolio/resume-style site: keep content through the “Skills & Expertise” section; remove all sections after that, including the “Connect” section.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-update-the-main-page-layout-to-stop-the-portfolio-content-at-the-skills-section-by-removing-all-sections-rendered-after-skills-e-g-the-gallery-and-contact-sections-so-that-the-page-ends-after-skills",
+      "title": "Update the main page layout to stop the portfolio content at the “Skills” section by removing all sections rendered after Skills (e.g., the Gallery and Contact sections) so that the page ends after Skills.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-site-navigation-to-match-the-new-section-list-by-removing-navigation-links-to-sections-that-no-longer-exist-e-g-gallery-and-contact-and-ensuring-remaining-links-still-smooth-scroll-correctly",
+      "title": "Update site navigation to match the new section list by removing navigation links to sections that no longer exist (e.g., Gallery and Contact) and ensuring remaining links still smooth-scroll correctly.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-hero-cta-buttons-so-they-do-not-scroll-to-removed-sections-replace-or-remove-ctas-that-target-gallery-and-contact-so-all-hero-ctas-navigate-to-existing-sections-only",
+      "title": "Update the hero CTA buttons so they do not scroll to removed sections; replace or remove CTAs that target `#gallery` and `#contact` so all hero CTAs navigate to existing sections only.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-connect-part-from-the-footer-and-ensure-the-footer-layout-remains-visually-balanced-after-the-removal-including-removing-any-related-social-icon-links-shown-under-the-connect-heading",
+      "title": "Remove the “Connect” part from the footer and ensure the footer layout remains visually balanced after the removal (including removing any related social icon links shown under the Connect heading).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-footer-quick-links-so-it-does-not-include-links-to-removed-sections-e-g-gallery-and-contact",
+      "title": "Update footer “Quick Links” so it does not include links to removed sections (e.g., Gallery and Contact).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Remove all sections after “Skills & Expertise”, including the “Connect” section",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Remove all portfolio sections after Skills & Expertise and remove Connect",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

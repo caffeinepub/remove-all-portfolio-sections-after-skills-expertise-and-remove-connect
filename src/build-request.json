@@ -1,0 +1,115 @@
+{
+  "kind": "build_request",
+  "title": "Remove all portfolio sections after Skills & Expertise and remove Connect",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the main page layout to stop the portfolio content at the “Skills” section by removing all sections rendered after Skills (e.g., the Gallery and Contact sections) so that the page ends after Skills.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-last"
+        ],
+        "quotes": [
+          "Now i basically want that till skills and expertise after that remove all and also the connect part also"
+        ]
+      },
+      "acceptanceCriteria": [
+        "`frontend/src/App.tsx` no longer imports or renders `GallerySection` and `ContactSection` after `SkillsSection`.",
+        "When viewing the app, scrolling past the Skills section does not reveal Gallery or Contact content."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Update site navigation to match the new section list by removing navigation links to sections that no longer exist (e.g., Gallery and Contact) and ensuring remaining links still smooth-scroll correctly.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-last"
+        ],
+        "quotes": [
+          "till skills and expertise after that remove all"
+        ]
+      },
+      "acceptanceCriteria": [
+        "`frontend/src/components/portfolio/SiteHeader.tsx` nav items do not include “Gallery” or “Contact”.",
+        "Clicking remaining header links (Home/About/Services/Experience/Skills) smooth-scrolls to the correct section without errors."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Update the hero CTA buttons so they do not scroll to removed sections; replace or remove CTAs that target `#gallery` and `#contact` so all hero CTAs navigate to existing sections only.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-last"
+        ],
+        "quotes": [
+          "till skills and expertise after that remove all"
+        ]
+      },
+      "acceptanceCriteria": [
+        "`frontend/src/components/portfolio/sections/HeroSection.tsx` no longer references `#contact` or `#gallery`.",
+        "All visible hero buttons scroll to existing sections (for example `#skills` and/or `#experience`) and do not produce console errors when clicked."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Remove the “Connect” part from the footer and ensure the footer layout remains visually balanced after the removal (including removing any related social icon links shown under the Connect heading).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-last"
+        ],
+        "quotes": [
+          "and also the connect part also"
+        ]
+      },
+      "acceptanceCriteria": [
+        "`frontend/src/components/portfolio/SiteFooter.tsx` no longer displays the “Connect” heading or its social icon row.",
+        "Footer spacing/grid does not leave an empty third column; the remaining footer sections render cleanly on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Update footer “Quick Links” so it does not include links to removed sections (e.g., Gallery and Contact).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-last"
+        ],
+        "quotes": [
+          "after that remove all"
+        ]
+      },
+      "acceptanceCriteria": [
+        "`frontend/src/components/portfolio/SiteFooter.tsx` quick links do not include anchors for `#gallery` or `#contact`.",
+        "No remaining footer links point to non-existent section IDs."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit any files under `frontend/src/components/ui` (compose existing components only).",
+    "Do not modify immutable hook/bootstrap files: `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useInternetIdentity.tsx`, `frontend/src/hooks/useActor.ts`, `frontend/src/main.tsx`.",
+    "Backend must remain single-actor; no backend changes are required for this request."
+  ],
+  "nonGoals": [
+    "Do not redesign or rewrite the content of sections that remain (Hero/About/Services/Experience/Skills) beyond updating links that point to removed sections.",
+    "Do not add new sections or new backend-driven content/storage."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}
